@@ -1,0 +1,21 @@
+{
+    "name": "daa/restful-curl-php-wrapper",
+    "license": "MIT",
+    "type": "library",
+    "description": "Composer based cURL restful wrapper",
+    "authors": [
+        {
+            "name": "Daniel Antelo",
+            "homepage": "http://www.danielanteloagra.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4":{
+            "Curl\\Sdk\\": "src"
+        }
+    }
+}
