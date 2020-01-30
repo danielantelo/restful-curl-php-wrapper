@@ -153,7 +153,7 @@ class HttpClient
         if (($result === false || curl_getinfo($this->handler, CURLINFO_HTTP_CODE) != 200)) {
             if ($attempt <= $this->connectionRetryAttempts) {
                 sleep($this->connectionRetryPause);
-                $this->execute($attempt+1);
+                return $this->execute($attempt+1);
             } else {
                 throw new \Exception(sprintf(
                     "Error %s: %s %s",
